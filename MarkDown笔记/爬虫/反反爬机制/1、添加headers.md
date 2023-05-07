@@ -13,6 +13,8 @@ requests.get(url,headers=headers)
 
 ## User-Agent
 
+对于User-Agent想必大家都不陌生
+
 ## cookie
 
 ## Referer
@@ -22,6 +24,4 @@ requests.get(url,headers=headers)
 ## 普通访问
 
 一般来说，无论是什么网站，都是需要添加`User-Agent`来进行`get`的，然后就是登录才能访问的需要加上`cookie`，剩下的就需要看网站的具体形式了。
-
-## 
 
