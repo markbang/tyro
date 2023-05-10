@@ -13,7 +13,14 @@ requests.get(url,headers=headers)
 
 ## User-Agent
 
-对于User-Agent想必大家都不陌生
+对于User-Agent想必大家都不陌生，这是爬虫的第一步，大部分网站都有检查User-Agent，设置它很简单，就是打开开发者工具，在网络请求中找到复制粘贴即可。因为User-Agent一般都是固定的，里面包含的只是一些浏览器型号之类的，目的是确保你这个请求是真人，所以`my_fake_useragent`库也应运而生。
+
+```python
+from my_fake_useragent import UserAgent
+headers = {'User-Agent': UserAgent(family='chrome').random()}
+```
+
+按照这个方式就可以随机User-Agent，更加方便而且会解决一些User-Agent反爬机制。
 
 ## cookie
 
